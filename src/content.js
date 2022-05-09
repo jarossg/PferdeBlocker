@@ -1,6 +1,6 @@
 const tags = ["h1", "h2", "h3", "a", "p", "title", "div", "button"];
-const namessing = ["Hufeneisenhuso", "Gemeiner Gaul", "Hufratte"]
-const namesplu = ["Hufeneisenhusos", "Gemeine Gäule", "Hufratten"]
+const namessing = ["Hufeneisenhuso", "Gemeiner Gaul", "Hufratte" , "Hufeisenfotze" , "Mistvieh"]
+const namesplu = ["Hufeneisenhusos", "Gemeine Gäule", "Hufratten", "Hufeisenfotzen", "Mistviecher"]
 let element = null;
 for (const tag of tags) {
     const elements = document.evaluate('//*[contains(text(),\'Pferd\') or contains(text(),\'pferd\')]', document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
