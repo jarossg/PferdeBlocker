@@ -13,4 +13,4 @@ This chrome browser extension will replace all occurences of "Pferd" with an oth
 
 ## Background <a name="backgound"></a>
 This Project is based on the german Subreddit [r/PferdeSindKacke](https://reddit.com/r/PferdeSindKacke)
-The Topic of this Subreddit revolves around Horses and how they are dumb and pointless.
+The topic of this Subreddit revolves around horses and how they are dumb and pointless.

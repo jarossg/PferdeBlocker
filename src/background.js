@@ -1,6 +1,17 @@
-chrome.runtime.addListener(
+let active = true;
+
+chrome.storage.local.get('active', function(result){
+  active = result.active;
+});
+
+chrome.storage.onChanged.addListener(function(changes, namespace) {
+  active = changes.active.newValue;
+});
+
+chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse){
-    let active = document.getElementById("status").checked;
+    console.log("Anfrage erhalten");
+    console.log(active);
     sendResponse({status: active});
   }
 );
