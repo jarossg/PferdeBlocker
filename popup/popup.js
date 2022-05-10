@@ -1,7 +1,3 @@
-//const checkbox = document.getElementById("statusCheckbox");
-
-
-
 window.onload = function() {
 
     var checkbox = document.querySelector("#statusCheckbox");
@@ -11,9 +7,6 @@ window.onload = function() {
       });
 
     checkbox.onchange = function() {
-        console.log(checkbox.checked.toString());
         chrome.storage.local.set({active: checkbox.checked});
     };
-
-
 };

@@ -10,8 +10,6 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse){
-    console.log("Anfrage erhalten");
-    console.log(active);
     sendResponse({status: active});
   }
 );

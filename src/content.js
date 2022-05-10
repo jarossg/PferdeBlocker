@@ -2,9 +2,7 @@ const tags = ["h1", "h2", "h3", "a", "p", "title", "div", "button"];
 const namessing = ["Hufeneisenhuso", "Gemeiner Gaul", "Hufratte", "Hufeisenfotze", "Mistvieh"]
 const namesplu = ["Hufeneisenhusos", "Gemeine Gäule", "Hufratten", "Hufeisenfotzen", "Mistviecher"]
 
-let active = false;
-
-function cleanPage() {
+function cleanPage(active) {
   if (active) {
     let element = null;
     for (const tag of tags) {
@@ -27,9 +25,8 @@ function cleanPage() {
 }
 
 chrome.runtime.sendMessage({ tes: "test" }, function (response) {
-  console.log(response.status);
-  active = response.status;
-  cleanPage();
+  let active = response.status;
+  cleanPage(active);
 });
 
 
