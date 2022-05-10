@@ -3,13 +3,16 @@
         <meta charset="utf-8">
         <title>PferdeBlocker</title>
         <script src="popup.js"></script>
-
+        <link rel="stylesheet" href="popup.css">
 
     </head>
     <body>
         <h1>Pferde-Blocker</h1>
-
-        <input class="horizontal" type="checkbox" name="status" value="status" id="statusCheckbox" checked>
+        
+        <label class="switch">
+            <input class="horizontal" type="checkbox" name="status" value="status" id="statusCheckbox" checked>
+            <span class="slider round"></span>
+        </label>
         <label class="horizontal" for="status">Hufratten blockieren</label>
     </body>
 </html>
