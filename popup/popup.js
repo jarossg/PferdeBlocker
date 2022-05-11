@@ -1,5 +1,5 @@
 const setBlocked = info => {
-  document.getElementById("blocked").textContent = info.blocked;
+  document.getElementById("blocked").textContent = "Auf dieser Seite blockierte Hufeisenfotzen: " + info.blocked;
 };
 
 window.onload = function() {
