@@ -1,3 +1,7 @@
+const setBlocked = info => {
+  document.getElementById("blocked").textContent = info.blocked;
+};
+
 window.onload = function() {
 
     var checkbox = document.querySelector("#statusCheckbox");
@@ -6,6 +10,14 @@ window.onload = function() {
         checkbox.checked = result.active;
       });
 
+    chrome.tabs.query({
+      active: true,
+      currentWindow: true
+    }, tabs => {
+      chrome.tabs.sendMessage(tabs[0].id, {from:"popup"},setBlocked);
+    });
+
+  
     checkbox.onchange = function() {
         chrome.storage.local.set({active: checkbox.checked});
     };

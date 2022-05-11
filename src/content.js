@@ -29,4 +29,14 @@ chrome.runtime.sendMessage({ tes: "test" }, function (response) {
   cleanPage(active);
 });
 
+chrome.runtime.onMessage.addListener((msg,sender,response) => {
+  if(msg.from === "popup"){
+    var info = {
+      blocked: 1
+    };
+
+    response(info);
+  }
+})
+
 
