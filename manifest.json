@@ -1,7 +1,9 @@
 {
     "name": "PferdeBlocker",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "manifest_version": 3,
+
+    "description": "Blockiert das Wort Pferd auf Webseiten.",
     "icons": {
         "16": "icons/16x16.png",
         "19": "icons/19x19.png",
